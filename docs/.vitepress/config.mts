@@ -18,6 +18,7 @@ export default defineConfig({
     siteTitle: 'SIFT Map Tracker',
     nav: [
       { text: '快速开始', link: '/getting-started/' },
+      { text: 'Android', link: '/android/' },
       { text: '功能指南', link: '/tracking/' },
       { text: '故障排查', link: '/troubleshooting/' },
       { text: '路线分享站', link: 'https://www.mapforge.top/packs' }
@@ -31,6 +32,17 @@ export default defineConfig({
           { text: '首次启动', link: '/getting-started/first-run' },
           { text: '五分钟快速开始', link: '/getting-started/' },
           { text: '版本记录', link: '/releases/' }
+        ]
+      },
+      {
+        text: 'Android 客户端',
+        items: [
+          { text: '移动端概览', link: '/android/' },
+          { text: '下载与安装', link: '/android/install' },
+          { text: '首次启动', link: '/android/first-run' },
+          { text: '路线与 HUD', link: '/android/routes-hud' },
+          { text: '移动端故障排查', link: '/android/troubleshooting' },
+          { text: '构建与贡献', link: '/android/development' }
         ]
       },
       {
