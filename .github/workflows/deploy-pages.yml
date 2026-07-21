@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: documentation-deploy
   cancel-in-progress: true
 
 jobs:
@@ -33,6 +33,17 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
+      - name: Build self-hosted documentation
+        run: pnpm docs:build
+        env:
+          DOCS_TARGET: self-hosted
+      - name: Upload self-hosted artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hk-static-site
+          path: docs/.vitepress/dist
+          if-no-files-found: error
+          retention-days: 7
   deploy:
     environment:
       name: github-pages
@@ -43,3 +54,77 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+  deploy-hk:
+    if: github.ref == 'refs/heads/main' && vars.HK_WIKI_ENABLED == 'true'
+    environment:
+      name: hk-wiki
+      url: https://docs.mapforge.top
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download self-hosted artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hk-static-site
+          path: dist
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.HK_WIKI_SSH_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.HK_WIKI_KNOWN_HOSTS }}
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/id_ed25519 ~/.ssh/known_hosts
+      - name: Upload release
+        env:
+          DEPLOY_HOST: ${{ vars.HK_WIKI_HOST }}
+          DEPLOY_USER: ${{ vars.HK_WIKI_USER }}
+          RELEASE_ID: ${{ github.sha }}-${{ github.run_id }}
+        run: |
+          ssh "$DEPLOY_USER@$DEPLOY_HOST" \
+            "mkdir -p '/opt/siftmaptracker-wiki/releases/$RELEASE_ID'"
+          rsync -az --delete \
+            dist/ \
+            "$DEPLOY_USER@$DEPLOY_HOST:/opt/siftmaptracker-wiki/releases/$RELEASE_ID/"
+      - name: Activate release
+        env:
+          DEPLOY_HOST: ${{ vars.HK_WIKI_HOST }}
+          DEPLOY_USER: ${{ vars.HK_WIKI_USER }}
+          RELEASE_ID: ${{ github.sha }}-${{ github.run_id }}
+        run: |
+          ssh "$DEPLOY_USER@$DEPLOY_HOST" "set -eu
+            base=/opt/siftmaptracker-wiki
+            previous=\$(readlink -f \"\$base/current\" 2>/dev/null || true)
+            printf '%s\n' \"\$previous\" > \"\$base/previous-release\"
+            ln -sfn \"\$base/releases/$RELEASE_ID\" \"\$base/current.next\"
+            mv -Tf \"\$base/current.next\" \"\$base/current\""
+      - name: Verify deployment
+        env:
+          DEPLOY_HOST: ${{ vars.HK_WIKI_HOST }}
+          DEPLOY_USER: ${{ vars.HK_WIKI_USER }}
+        run: |
+          if ! curl --fail --silent --show-error \
+            --retry 6 --retry-all-errors --retry-delay 5 \
+            https://docs.mapforge.top/ > /tmp/wiki-home.html \
+            || ! grep -q 'SIFT Map Tracker' /tmp/wiki-home.html; then
+            ssh "$DEPLOY_USER@$DEPLOY_HOST" 'set -eu
+              base=/opt/siftmaptracker-wiki
+              previous=$(cat "$base/previous-release" 2>/dev/null || true)
+              if [ -n "$previous" ] && [ -d "$previous" ]; then
+                ln -sfn "$previous" "$base/current.next"
+                mv -Tf "$base/current.next" "$base/current"
+              fi'
+            exit 1
+          fi
+      - name: Prune old releases
+        env:
+          DEPLOY_HOST: ${{ vars.HK_WIKI_HOST }}
+          DEPLOY_USER: ${{ vars.HK_WIKI_USER }}
+        run: |
+          ssh "$DEPLOY_USER@$DEPLOY_HOST" 'set -eu
+            cd /opt/siftmaptracker-wiki/releases
+            ls -1dt -- */ 2>/dev/null | tail -n +6 | while IFS= read -r release; do
+              rm -rf -- "$release"
+            done'
