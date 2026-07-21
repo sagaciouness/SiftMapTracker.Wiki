@@ -1,0 +1,23 @@
+:root {
+  --vp-c-brand-1: #4f9d2f;
+  --vp-c-brand-2: #62b83b;
+  --vp-c-brand-3: #76cf4d;
+  --vp-c-brand-soft: rgba(113, 204, 70, 0.14);
+  --vp-home-hero-name-color: #16263f;
+  --vp-home-hero-image-background-image: none;
+}
+
+.dark {
+  --vp-c-brand-1: #91e269;
+  --vp-c-brand-2: #7bd052;
+  --vp-home-hero-name-color: #f1f5f9;
+}
+
+.VPHomeHero .image-bg { display: none; }
+.VPImage.logo { image-rendering: pixelated; }
+.vp-doc img {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+}
+.vp-doc .no-border img { border: 0; }
+

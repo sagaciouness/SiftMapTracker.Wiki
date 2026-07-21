@@ -1,0 +1,16 @@
+{
+  "name": "sift-map-tracker-wiki",
+  "private": true,
+  "version": "0.9.3",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs --host 127.0.0.1 --port 43127",
+    "check:links": "node scripts/check-links.mjs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "packageManager": "pnpm@10.13.1"
+}
