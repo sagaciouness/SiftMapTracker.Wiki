@@ -29,7 +29,8 @@ export default defineConfig({
           { text: '文档首页', link: '/' },
           { text: '下载与安装', link: '/getting-started/install' },
           { text: '首次启动', link: '/getting-started/first-run' },
-          { text: '五分钟快速开始', link: '/getting-started/' }
+          { text: '五分钟快速开始', link: '/getting-started/' },
+          { text: '版本记录', link: '/releases/' }
         ]
       },
       {
@@ -57,9 +58,7 @@ export default defineConfig({
         items: [
           { text: '设置说明', link: '/settings/' },
           { text: '快捷键', link: '/settings/hotkeys' },
-          { text: '更新、公告与数据', link: '/settings/updates' },
-          { text: '故障排查', link: '/troubleshooting/' },
-          { text: '反馈问题', link: '/troubleshooting/report' }
+          { text: '故障排查', link: '/troubleshooting/' }
         ]
       },
       {
@@ -67,8 +66,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '项目结构与构建', link: '/contributors/' },
-          { text: '数据格式', link: '/contributors/data-formats' },
-          { text: '版本记录', link: '/releases/' }
+          { text: '数据格式', link: '/contributors/data-formats' }
         ]
       }
     ],
@@ -95,4 +93,3 @@ export default defineConfig({
     image: { lazyLoading: true }
   }
 })
-

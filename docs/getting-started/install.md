@@ -9,11 +9,13 @@
 
 ## 官方获取渠道
 
-客户端更新信息以内置更新提示和项目公开渠道为准：
+客户端及更新包只通过以下渠道发布：
 
-- [GitHub 项目](https://github.com/sagaciouness/SiftMapTracker.Client)
-- [QQ 频道](https://pd.qq.com/g/pd29655551)
-- 客户端更新页提供的百度网盘或夸克网盘链接
+- [B站：sicuncat](https://space.bilibili.com/1570010855)
+- [抖音：偏差](https://www.douyin.com/user/MS4wLjABAAAAEVsQb2aABflGGf7fabxefdFMzV6GFwROH2jmYVMv0-ExGRsDxHaVjpgADCpsxoCs)
+- 客户端“检查更新”页面提供的百度网盘或夸克网盘链接
+
+GitHub 仓库用于代码与文档版本管理，不作为玩家安装包的官方获取渠道。网盘地址可能随版本变化，请以客户端更新页当时显示的链接为准。
 
 ::: danger 防骗提醒
 本项目免费发布。任何以出售激活码、会员或付费安装为名收取费用的行为均与项目无关。
@@ -41,4 +43,3 @@ SIFT-Map-Tracker-v0.9.3/
 ## 安全软件提示
 
 程序内含由 Python 打包的本地识图服务，部分安全软件可能误报或隔离其运行库。不要盲目关闭系统安全功能；先核对下载渠道、包体版本与文件完整性，再为确认安全的目录恢复被隔离文件。
-

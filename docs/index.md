@@ -39,7 +39,5 @@ features:
 ## 获取帮助
 
 - 使用中断或报错：先查看[故障排查](/troubleshooting/)。
-- 可稳定复现的软件问题：提交 [GitHub Issue](https://github.com/sagaciouness/SiftMapTracker.Client/issues)。
 - 路线下载与分享：访问 [MapForge 路线分享站](https://www.mapforge.top/packs)。
-- 日常交流：加入 [QQ 频道](https://pd.qq.com/g/pd29655551)。
-
+- 软件发布与动态：[B站 sicuncat](https://space.bilibili.com/1570010855) / [抖音 偏差](https://www.douyin.com/user/MS4wLjABAAAAEVsQb2aABflGGf7fabxefdFMzV6GFwROH2jmYVMv0-ExGRsDxHaVjpgADCpsxoCs)。
