@@ -17,71 +17,78 @@ export default defineConfig({
     logo: '/brand/logo.png',
     siteTitle: 'SIFT Map Tracker',
     nav: [
-      { text: '快速开始', link: '/getting-started/' },
-      { text: 'Android', link: '/android/' },
-      { text: '功能指南', link: '/tracking/' },
-      { text: '故障排查', link: '/troubleshooting/' },
+      { text: '电脑端', link: '/getting-started/' },
+      { text: '手机端（精简版）', link: '/android/' },
       { text: '路线分享站', link: 'https://www.mapforge.top/packs' }
     ],
-    sidebar: [
-      {
-        text: '开始使用',
-        items: [
-          { text: '文档首页', link: '/' },
-          { text: '下载与安装', link: '/getting-started/install' },
-          { text: '首次启动', link: '/getting-started/first-run' },
-          { text: '五分钟快速开始', link: '/getting-started/' },
-          { text: '版本记录', link: '/releases/' }
-        ]
-      },
-      {
-        text: 'Android 客户端',
-        items: [
-          { text: '移动端概览', link: '/android/' },
-          { text: '下载与安装', link: '/android/install' },
-          { text: '首次启动', link: '/android/first-run' },
-          { text: '路线与 HUD', link: '/android/routes-hud' },
-          { text: '移动端故障排查', link: '/android/troubleshooting' },
-          { text: '构建与贡献', link: '/android/development' }
-        ]
-      },
-      {
-        text: '定位与导航',
-        items: [
-          { text: '追踪定位', link: '/tracking/' },
-          { text: '算法与参数', link: '/tracking/algorithms' },
-          { text: '路线导航', link: '/navigation/' },
-          { text: 'HUD 与灵动岛', link: '/navigation/hud' },
-          { text: '导航总览', link: '/navigation/overview' }
-        ]
-      },
-      {
-        text: '编辑与拓展',
-        items: [
-          { text: '路线编辑', link: '/editors/routes' },
-          { text: '资源点编辑', link: '/editors/resources' },
-          { text: '地图标记', link: '/editors/survey-map' },
-          { text: '功能拓展', link: '/extensions/' },
-          { text: '定位风险图', link: '/extensions/localization-risk' }
-        ]
-      },
-      {
-        text: '设置与支持',
-        items: [
-          { text: '设置说明', link: '/settings/' },
-          { text: '快捷键', link: '/settings/hotkeys' },
-          { text: '故障排查', link: '/troubleshooting/' }
-        ]
-      },
-      {
-        text: '贡献者',
-        collapsed: true,
-        items: [
-          { text: '项目结构与构建', link: '/contributors/' },
-          { text: '数据格式', link: '/contributors/data-formats' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/android/': [
+        {
+          text: '手机端（精简版）',
+          items: [
+            { text: '手机端首页', link: '/android/' },
+            { text: '下载与安装', link: '/android/install' },
+            { text: '首次启动', link: '/android/first-run' },
+            { text: '路线与 HUD', link: '/android/routes-hud' },
+            { text: '故障排查', link: '/android/troubleshooting' }
+          ]
+        },
+        {
+          text: '切换平台',
+          items: [
+            { text: '返回电脑端文档', link: '/getting-started/' }
+          ]
+        }
+      ],
+      '/': [
+        {
+          text: '电脑端 · 开始使用',
+          items: [
+            { text: '文档首页', link: '/' },
+            { text: '下载与安装', link: '/getting-started/install' },
+            { text: '首次启动', link: '/getting-started/first-run' },
+            { text: '五分钟快速开始', link: '/getting-started/' },
+            { text: '版本记录', link: '/releases/' }
+          ]
+        },
+        {
+          text: '定位与导航',
+          items: [
+            { text: '追踪定位', link: '/tracking/' },
+            { text: '算法与参数', link: '/tracking/algorithms' },
+            { text: '路线导航', link: '/navigation/' },
+            { text: 'HUD 与灵动岛', link: '/navigation/hud' },
+            { text: '导航总览', link: '/navigation/overview' }
+          ]
+        },
+        {
+          text: '编辑与拓展',
+          items: [
+            { text: '路线编辑', link: '/editors/routes' },
+            { text: '资源点编辑', link: '/editors/resources' },
+            { text: '地图标记', link: '/editors/survey-map' },
+            { text: '功能拓展', link: '/extensions/' },
+            { text: '定位风险图', link: '/extensions/localization-risk' }
+          ]
+        },
+        {
+          text: '设置与支持',
+          items: [
+            { text: '设置说明', link: '/settings/' },
+            { text: '快捷键', link: '/settings/hotkeys' },
+            { text: '故障排查', link: '/troubleshooting/' }
+          ]
+        },
+        {
+          text: '贡献者',
+          collapsed: true,
+          items: [
+            { text: '项目结构与构建', link: '/contributors/' },
+            { text: '数据格式', link: '/contributors/data-formats' }
+          ]
+        }
+      ]
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/sagaciouness/SiftMapTracker.Client' }
     ],

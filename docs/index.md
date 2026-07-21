@@ -10,11 +10,11 @@ hero:
     alt: SIFT Map Tracker
   actions:
     - theme: brand
-      text: 五分钟快速开始
+      text: 电脑端
       link: /getting-started/
     - theme: alt
-      text: 故障排查
-      link: /troubleshooting/
+      text: 手机端（精简版）
+      link: /android/
     - theme: alt
       text: 下载路线
       link: https://www.mapforge.top/packs
@@ -26,17 +26,17 @@ features:
     details: 支持单路线、多路线切换、导航总览、HUD 与灵动岛提示。
   - title: 地图工具
     details: 编辑路线和资源点，叠加图层进行地图标记并导出 PNG。
-  - title: Android 客户端
-    details: 在 Android 10 及以上的 arm64 设备上通过屏幕采集提供定位、路线与悬浮 HUD。
+  - title: 手机端（精简版）
+    details: 在 Android 手机上提供定位、路线与悬浮 HUD；编辑与导出等完整功能请使用电脑端。
 ---
 
 ## 当前版本
 
-本 Wiki 当前对应 Windows 客户端 **v0.9.3** 与 Android 客户端 **v0.9.0**。正文始终以各平台最新稳定版为准，旧版本差异记录在[版本记录](/releases/)中。
+本 Wiki 当前对应电脑端 **v0.9.3** 与手机端 **v0.9.0**。正文始终以各平台最新稳定版为准，旧版本差异记录在[版本记录](/releases/)中。
 
-## Android 客户端
+## 手机端（精简版）
 
-Android 版不依赖电脑，通过系统屏幕采集在手机本地运行 SIFT 或模板匹配，并以悬浮 HUD 显示地图和路线。移动端权限、录屏授权和小地图框选流程与 Windows 版不同，请从 [Android 客户端指南](/android/) 开始。
+手机端不依赖电脑，通过系统屏幕采集完成定位，并以悬浮 HUD 显示地图和路线。手机端只保留导航所需的核心能力；移动端权限、录屏授权和小地图框选流程请从 [手机端指南](/android/) 开始。
 
 ::: warning 使用限制
 项目免费发布，仅供学习交流，禁止用于商业用途。请只从项目声明的官方渠道获取软件，不要为本项目付费。
