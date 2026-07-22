@@ -58,8 +58,7 @@ sift-map-tracker/service/_internal/cv2/cv2.pyd
 
 - 客户端版本；
 - Windows 版本、显示器分辨率和缩放比例；
-- 当前算法；
-- 从启动服务到报错的完整日志；
+- 当前算法从启动服务到报错的完整日志；
 - `settings_override.json` 中与截图区域相关的字段；
 - 问题能否稳定复现。
 
