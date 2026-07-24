@@ -45,4 +45,5 @@ D:\SIFT-Map-Tracker-v0.9.3
 
 - [了解定位算法](/tracking/algorithms)
 - [路线导航说明](/navigation/)
+- [屏幕识别五分钟快速上手](/screen-recognition/quick-start)
 - [启动失败排查](/troubleshooting/)

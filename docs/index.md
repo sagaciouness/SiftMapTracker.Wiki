@@ -26,6 +26,8 @@ features:
     details: 支持单路线、多路线切换、导航总览、HUD 与灵动岛提示。
   - title: 屏幕识别
     details: 按需识别精灵蛋，并监测童话事件、血脉与独立 80 次保底。
+    link: /screen-recognition/
+    linkText: 打开屏幕识别指南
   - title: 地图工具
     details: 编辑路线和资源点，叠加图层进行地图标记并导出 PNG。
   - title: 手机端（精简版）

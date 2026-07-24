@@ -18,10 +18,36 @@ export default defineConfig({
     siteTitle: 'SIFT Map Tracker',
     nav: [
       { text: '电脑端', link: '/getting-started/' },
+      { text: '屏幕识别', link: '/screen-recognition/' },
       { text: '手机端（精简版）', link: '/android/' },
       { text: '路线分享站', link: 'https://www.mapforge.top/packs' }
     ],
     sidebar: {
+      '/screen-recognition/': [
+        {
+          text: '屏幕识别工作区',
+          items: [
+            { text: '工作区总览', link: '/screen-recognition/' },
+            { text: '五分钟快速上手', link: '/screen-recognition/quick-start' },
+            { text: '查蛋识别', link: '/screen-recognition/egg-lookup' },
+            { text: '童话事件与保底', link: '/screen-recognition/fairy-events' },
+            { text: '采集校准', link: '/screen-recognition/calibration' }
+          ]
+        },
+        {
+          text: '数据与支持',
+          items: [
+            { text: '数据库、历史与隐私', link: '/screen-recognition/data-and-privacy' },
+            { text: '故障排查', link: '/screen-recognition/troubleshooting' }
+          ]
+        },
+        {
+          text: '切换工作区',
+          items: [
+            { text: '返回地图追踪文档', link: '/getting-started/' }
+          ]
+        }
+      ],
       '/android/': [
         {
           text: '手机端（精简版）',
@@ -59,17 +85,6 @@ export default defineConfig({
             { text: '路线导航', link: '/navigation/' },
             { text: 'HUD 与灵动岛', link: '/navigation/hud' },
             { text: '导航总览', link: '/navigation/overview' }
-          ]
-        },
-        {
-          text: '屏幕识别',
-          items: [
-            { text: '工作区总览', link: '/screen-recognition/' },
-            { text: '查蛋识别', link: '/screen-recognition/egg-lookup' },
-            { text: '童话事件与保底', link: '/screen-recognition/fairy-events' },
-            { text: '采集校准', link: '/screen-recognition/calibration' },
-            { text: '数据库、历史与隐私', link: '/screen-recognition/data-and-privacy' },
-            { text: '屏幕识别排障', link: '/screen-recognition/troubleshooting' }
           ]
         },
         {
