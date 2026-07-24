@@ -62,6 +62,17 @@ export default defineConfig({
           ]
         },
         {
+          text: '屏幕识别',
+          items: [
+            { text: '工作区总览', link: '/screen-recognition/' },
+            { text: '查蛋识别', link: '/screen-recognition/egg-lookup' },
+            { text: '童话事件与保底', link: '/screen-recognition/fairy-events' },
+            { text: '采集校准', link: '/screen-recognition/calibration' },
+            { text: '数据库、历史与隐私', link: '/screen-recognition/data-and-privacy' },
+            { text: '屏幕识别排障', link: '/screen-recognition/troubleshooting' }
+          ]
+        },
+        {
           text: '编辑与拓展',
           items: [
             { text: '路线编辑', link: '/editors/routes' },
