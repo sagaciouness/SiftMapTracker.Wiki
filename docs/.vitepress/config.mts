@@ -30,7 +30,7 @@ export default defineConfig({
             { text: '工作区总览', link: '/screen-recognition/' },
             { text: '五分钟快速上手', link: '/screen-recognition/quick-start' },
             { text: '查蛋识别', link: '/screen-recognition/egg-lookup' },
-            { text: '童话事件与保底', link: '/screen-recognition/fairy-events' },
+            { text: '童话事件与血脉', link: '/screen-recognition/fairy-events' },
             { text: '采集校准', link: '/screen-recognition/calibration' }
           ]
         },
