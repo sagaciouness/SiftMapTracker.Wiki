@@ -16,21 +16,27 @@
 
 仍失败时删除 `runtime/settings_override.json`，重启客户端后重新配置。不要复制其他玩家的区域坐标。
 
-## OpenCV recursion / cv2 加载失败
+## service.exe 缺失或无法启动
 
-典型日志：
-
-```text
-ImportError: ERROR: recursion is detected during loading of "cv2" binary extensions
-```
-
-检查文件：
+当前玩家包中的地图定位和 OCR 服务均为单文件程序：
 
 ```text
-sift-map-tracker/service/_internal/cv2/cv2.pyd
+sift-map-tracker/service/service.exe
+screen-recognition/service/service.exe
 ```
 
-在官方 `0.9.3` 包中该文件约为 71.4 MiB。缺失、大小明显异常或被隔离时，重新下载完整包并解压；同时检查安全软件隔离记录。不要从来路不明的位置单独下载 DLL 或 PYD。
+包内不再包含 `service/_internal` 或单独的 `cv2.pyd`。任一服务缺失、大小明显异常或被隔离时，请重新下载完整包并解压，同时检查安全软件隔离记录。不要从来路不明的位置单独下载 DLL、PYD 或不同版本的 `service.exe`。
+
+## 小尺寸 SIFT 缓存无法生成
+
+只有 SIFT 的 `158–163px` 选区需要动态 160 缓存。确认：
+
+1. 当前至少有 4 GB 可用物理内存；
+2. 系统盘至少有 256 MB 可用空间；
+3. `%LOCALAPPDATA%\SiftMapTracker\sift-cache\` 可写；
+4. 等待进度窗口完成，不要强制结束准备进程。
+
+资源不足时选择“自行调整分辨率”，放大游戏窗口或小地图后重新框选到至少 `164px`，即可改用包内紧凑缓存。动态缓存损坏时重新框选，客户端会按缺失缓存重新确认生成。
 
 ## 服务被应用控制策略阻止
 

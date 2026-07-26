@@ -2,7 +2,7 @@
 
 这是 SIFT Map Tracker 的玩家手册与贡献者文档源码。
 
-- 当前稳定版：`0.9.3`
+- 当前稳定版：`0.9.5`
 - 文档站：<https://docs.mapforge.top/>
 - GitHub Pages 镜像：<https://sagaciouness.github.io/SiftMapTracker.Wiki/>
 - 主项目：<https://github.com/sagaciouness/SiftMapTracker.Client>
