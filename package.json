@@ -1,7 +1,7 @@
 {
   "name": "sift-map-tracker-wiki",
   "private": true,
-  "version": "0.9.5",
+  "version": "0.9.6",
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress docs",

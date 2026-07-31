@@ -26,7 +26,7 @@ GitHub 仓库用于代码与文档版本管理，不作为玩家安装包的官�
 解压后至少应能看到：
 
 ```text
-SIFT-Map-Tracker-v0.9.5/
+SIFT-Map-Tracker-v0.9.6/
 ├─ SiftMapTracker.Client.exe
 ├─ sift-map-tracker/
 │  ├─ service/
