@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="470" viewBox="0 0 1000 470" role="img" aria-labelledby="title desc">
+ <title id="title">先测试按键再选择游戏的流程示意</title><desc id="desc">本地测试选测试窗口，确认11次按下松开。实际演奏必须重新选择游戏窗口，五秒内切回手碟界面；停止快捷键为 Ctrl Alt F12。</desc>
+ <rect width="1000" height="470" rx="16" fill="#f4f6f8"/>
+ <g font-family="Segoe UI,Microsoft YaHei,sans-serif" fill="#17232c">
+ <text x="36" y="49" font-size="26" font-weight="700">03 · 测试窗口和游戏窗口，不要选混了</text>
+ <text x="36" y="83" font-size="17" fill="#566573">操作流程示意 · 本地通过不代表游戏一定接收</text>
+ <rect x="36" y="111" width="450" height="218" rx="12" fill="#fff" stroke="#b9c9b0"/>
+ <text x="58" y="150" font-size="23" font-weight="700">先测：测试按键</text>
+ <text x="58" y="192" font-size="19">目标选“手碟按键测试窗口”</text><text x="58" y="227" font-size="19">开始演奏 → 5 秒内切到测试窗口</text>
+ <text x="58" y="262" font-size="19">B F G H J K T Y U H H</text><text x="58" y="301" font-size="18" fill="#355429">确认 11 次按下，每次都有松开</text>
+ <rect x="514" y="111" width="450" height="218" rx="12" fill="#fff" stroke="#d5b879"/>
+ <text x="536" y="150" font-size="23" font-weight="700">再弹：选择游戏</text>
+ <text x="536" y="192" font-size="19">刷新窗口 → 明确选中游戏</text><text x="536" y="227" font-size="19">开始演奏 → 5 秒内切回手碟界面</text>
+ <text x="536" y="262" font-size="19">不要选启动器，也不要停留在聊天框</text><text x="536" y="301" font-size="18" fill="#835919">看游戏是否真正响起音符</text>
+ <rect x="36" y="350" width="928" height="72" rx="10" fill="#e8edf2"/>
+ <text x="58" y="381" font-size="19">暂停 / 继续：Ctrl + Alt + F11　　停止：Ctrl + Alt + F12</text>
+ <text x="58" y="409" font-size="17" fill="#566573">切出目标窗口会暂停；继续会重新倒计时。松开 Ctrl、Alt、Shift 和 Windows 键。</text>
+ <text x="36" y="451" font-size="16" fill="#566573">请先用短示例。发送完成、驱动安装成功都不能代替游戏实测结果。</text>
+ </g>
+</svg>

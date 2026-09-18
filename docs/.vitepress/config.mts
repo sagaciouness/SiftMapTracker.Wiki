@@ -19,9 +19,23 @@ export default defineConfig({
     nav: [
       { text: '电脑端', link: '/getting-started/' },
       { text: '手机端（精简版）', link: '/android/' },
+      { text: '自动手碟', link: '/handpan/' },
       { text: '路线分享站', link: 'https://www.mapforge.top/packs' }
     ],
     sidebar: {
+      '/handpan/': [
+        {
+          text: '自动手碟 · 独立工具',
+          items: [
+            { text: '介绍与使用风险', link: '/handpan/' },
+            { text: '五分钟快速开始', link: '/handpan/quick-start' },
+            { text: '驱动下载、安装与卸载', link: '/handpan/driver' },
+            { text: '导入歌曲与修改曲谱', link: '/handpan/songs' },
+            { text: '常见问题', link: '/handpan/troubleshooting' }
+          ]
+        },
+        { text: '其他工具', items: [{ text: '返回 SIFT 文档首页', link: '/' }] }
+      ],
       '/screen-recognition/': [
         {
           text: '电脑端 · 屏幕识别',

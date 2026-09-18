@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img" aria-labelledby="title desc">
+ <title id="title">驱动下载文件选择示意</title><desc id="desc">在 oblitum/Interception 的 v1.0.1 发布页，展开 Assets，下载 Interception.zip，不要选择两个 Source code 文件。</desc>
+ <rect width="1000" height="440" rx="16" fill="#f4f6f8"/>
+ <g font-family="Segoe UI,Microsoft YaHei,sans-serif" fill="#17232c">
+ <text x="36" y="49" font-size="26" font-weight="700">01 · 驱动下载：只选 Interception.zip</text>
+ <text x="36" y="83" font-size="17" fill="#566573">操作示意图 · 不是网页截图 · 官网界面可能调整</text>
+ <rect x="36" y="110" width="928" height="74" rx="10" fill="#fff" stroke="#d6dce2"/>
+ <text x="58" y="140" font-size="18">确认仓库：oblitum / Interception</text><text x="58" y="168" font-size="18">版本：v1.0.1 → 展开 Assets</text>
+ <rect x="36" y="203" width="928" height="66" rx="10" fill="#e5f0de" stroke="#708e57" stroke-width="2"/>
+ <text x="59" y="245" font-size="24" font-weight="700">Interception.zip</text><text x="605" y="244" font-size="21" fill="#355429">← 下载这个，里面有安装器</text>
+ <rect x="36" y="285" width="928" height="45" rx="8" fill="#e9edf0"/><text x="59" y="315" font-size="19" fill="#566573">Source code (zip)　— 源码，不选</text>
+ <rect x="36" y="340" width="928" height="45" rx="8" fill="#e9edf0"/><text x="59" y="370" font-size="19" fill="#566573">Source code (tar.gz)　— 源码，不选</text>
+ <text x="36" y="415" font-size="17" fill="#566573">下载完成 → 右键 ZIP → 全部提取；不要直接在压缩包内运行。</text>
+ </g>
+</svg>

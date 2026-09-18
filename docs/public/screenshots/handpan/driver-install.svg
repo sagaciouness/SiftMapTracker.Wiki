@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+ <title id="title">驱动目录与管理员安装步骤示意</title><desc id="desc">找到 Interception 下的 command line installer 文件夹，在管理员 PowerShell 中进入真实路径，确认 Test-Path 为 True，执行安装后重启。</desc>
+ <rect width="1000" height="650" rx="16" fill="#f4f6f8"/>
+ <g font-family="Segoe UI,Microsoft YaHei,sans-serif" fill="#17232c">
+ <text x="36" y="49" font-size="26" font-weight="700">02 · 找到安装器，再打开管理员 PowerShell</text>
+ <text x="36" y="83" font-size="17" fill="#566573">操作示意图 · 路径只是例子，请使用你实际解压的位置</text>
+ <rect x="36" y="108" width="928" height="120" rx="10" fill="#fff" stroke="#d6dce2"/>
+ <text x="60" y="140" font-size="20">Interception</text><text x="88" y="174" font-size="20">└─ command line installer</text><text x="121" y="209" font-size="20" font-weight="700">└─ install-interception.exe</text>
+ <rect x="36" y="248" width="928" height="277" rx="10" fill="#17232c"/>
+ <g fill="#e7edf2"><text x="58" y="282" font-size="20" font-weight="700">管理员 PowerShell（从开始菜单搜索，右键以管理员身份运行）</text>
+ <text x="58" y="322" font-size="16" fill="#bed1de">先复制安装器所在文件夹的地址，替换下面引号里的路径：</text>
+ <text x="58" y="352" font-size="17" font-family="Consolas,monospace">Set-Location -LiteralPath "D:\Downloads\Interception\command line installer"</text>
+ <text x="58" y="396" font-size="20" font-family="Consolas,monospace">Test-Path -LiteralPath ".\install-interception.exe"</text>
+ <text x="58" y="427" font-size="17" fill="#bed1de">结果必须为 True；False 表示目录不对，先检查路径。</text>
+ <text x="58" y="477" font-size="23" font-family="Consolas,monospace" fill="#d3e8b9">.\install-interception.exe /install</text>
+ </g>
+ <rect x="36" y="545" width="928" height="62" rx="10" fill="#f6ead2" stroke="#d5b879"/>
+ <text x="58" y="584" font-size="22" font-weight="700">看到安装成功提示后 → 保存工作 → 开始菜单 → 电源 → 重启</text>
+ <text x="36" y="633" font-size="16" fill="#566573">系统阻止加载时停止操作，不关闭安全启动、内存完整性或签名保护。</text>
+ </g>
+</svg>
