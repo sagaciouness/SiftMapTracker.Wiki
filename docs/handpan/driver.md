@@ -1,6 +1,6 @@
 # 驱动下载、安装与卸载
 
-适用：独立自动手碟 0.1.0，Interception v1.0.1。第一次安装请优先跟着[五分钟快速开始](./quick-start)操作，这页用于查下载地址、文件位置、校验和卸载方法。
+适用：自动手碟 0.1.6，Interception v1.0.1。本页包含首次安装、下载校验与卸载步骤。
 
 ## 下载哪些文件
 
@@ -25,13 +25,25 @@
 
 ![安装目录和管理员 PowerShell 命令示意，需替换为自己的真实路径](/screenshots/handpan/driver-install.svg)
 
-先保存工作并关闭游戏。在**管理员 PowerShell**中进入包含安装器的文件夹，然后执行：
+1. 下载并完整解压上面的 **Interception.zip**。
+2. 打开解压后的 `command line installer` 文件夹，确认其中有 `install-interception.exe`，点击资源管理器地址栏复制完整路径。
+3. 在 Windows 开始菜单搜索 **PowerShell**，右键选择 **以管理员身份运行**。
+4. 保存工作并关闭游戏。在管理员 PowerShell 中执行下面两条命令，**把第一条的路径换成刚才复制的路径**：
+
+```powershell
+Set-Location -LiteralPath "D:\Downloads\Interception\command line installer"
+Test-Path -LiteralPath ".\install-interception.exe"
+```
+
+显示 `True` 表示已找到安装器；显示 `False` 时重新检查文件夹路径。找到安装器后执行：
 
 ```powershell
 .\install-interception.exe /install
 ```
 
-成功后通过开始菜单重启电脑，再打开手碟点“查找键盘”。完整的路径复制、进入目录、检查文件步骤见[快速开始第 3 步](./quick-start#_3-安装驱动-然后重启电脑)。安装错误时先记录原文，不要靠反复覆盖安装碰运气。
+看到 `Interception successfully installed. You must reboot for it to take effect.` 后，通过 Windows 开始菜单选择 **重启**。
+
+重启后打开自动手碟，继续[下载并导入曲子](./quick-start#_3-下载一首曲子-导入并试听)。安装报错时，保留完整提示并查看[驱动问题](./troubleshooting#驱动装不上或查找不到键盘)。
 
 上游 README 写明需要管理员命令行安装，测试范围仅明确到 Windows 10；更新的系统不能据此保证可用。系统拒绝加载时，不关闭安全启动、内存完整性或签名保护。
 
