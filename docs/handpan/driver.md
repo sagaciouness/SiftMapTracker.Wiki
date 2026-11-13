@@ -1,6 +1,6 @@
 # 驱动下载、安装与卸载
 
-适用：自动手碟 0.1.6，Interception v1.0.1。本页包含首次安装、下载校验与卸载步骤。
+自动手碟 0.1.6 使用 Interception v1.0.1 驱动。安装和卸载后都需要重启电脑。
 
 ## 下载哪些文件
 
@@ -8,7 +8,7 @@
 - [官方 Interception.zip 直链](https://github.com/oblitum/Interception/releases/download/v1.0.1/Interception.zip)
 - [上游说明](https://github.com/oblitum/Interception#driver-installation)
 
-在 Assets 中选择 **Interception.zip**，不要下载 Source code。本教程固定使用该版本，不使用第三方重打包驱动。
+在 Assets 中下载 **Interception.zip**，不要选 Source code，也不要使用第三方重打包的驱动。
 
 ![官方驱动下载选项示意，选择 Interception.zip](/screenshots/handpan/driver-download.svg)
 
@@ -19,7 +19,7 @@
 | 软件自带的 DLL | 自动手碟目录 `Input/Interception/x64/interception.dll` | 保留目录结构；缺失时重新完整解压官方软件包 |
 | `interception.lib`、源码和示例 | 上游驱动包内 | 正常使用不需要操作，也不用编译 |
 
-“键盘品牌驱动”不等于 Interception，例如键盘厂商用来调灯光的软件不能替代此步骤。不必为了使用手碟卸载厂商软件。
+键盘厂商的灯光、改键软件不能替代 Interception，两者可以保留。
 
 ## 安装与重启
 
@@ -45,7 +45,7 @@ Test-Path -LiteralPath ".\install-interception.exe"
 
 重启后打开自动手碟，继续[下载并导入曲子](./quick-start#_3-下载一首曲子-导入并试听)。安装报错时，保留完整提示并查看[驱动问题](./troubleshooting#驱动装不上或查找不到键盘)。
 
-上游 README 写明需要管理员命令行安装，测试范围仅明确到 Windows 10；更新的系统不能据此保证可用。系统拒绝加载时，不关闭安全启动、内存完整性或签名保护。
+官方说明中的系统测试范围只到 Windows 10，较新系统的兼容性需要实际确认。如果系统阻止加载驱动，先保留错误提示，不要关闭安全启动、内存完整性或签名保护。
 
 ## 可选：检查下载文件是否一致
 
@@ -55,7 +55,7 @@ Test-Path -LiteralPath ".\install-interception.exe"
 Get-FileHash -LiteralPath "D:\Downloads\Interception.zip" -Algorithm SHA256
 ```
 
-本项目核对过的 v1.0.1 文件记录：
+以下是本项目记录的 v1.0.1 文件校验值：
 
 | 文件 | SHA-256 |
 | --- | --- |
@@ -63,9 +63,9 @@ Get-FileHash -LiteralPath "D:\Downloads\Interception.zip" -Algorithm SHA256
 | `install-interception.exe` | `E137863A79DA797F08E7A137280FF2A123809044A888FD75CE9C973198915ABE` |
 | x64 `interception.dll` | `AB88164C11B1B48488772D4C3BFAA4509D5B0AE9DBC5A691DC4F96F0260443C8` |
 
-不一致时先停止安装，核对版本、下载地址和是否解压了正确文件。哈希一致只能说明与记录的文件相同，不能保证游戏兼容或没有风险。
+校验值不一致时，先核对版本、下载地址和文件。校验通过也不代表游戏一定支持该驱动。
 
-本项目对安装器和 DLL 的检查显示没有嵌入式 Authenticode 签名；这不是对内部驱动签名的结论，也不是让你忽略系统拦截的理由。
+记录中的安装器和 DLL 没有嵌入式 Authenticode 签名，驱动文件的签名需另行查看。遇到系统拦截时请保留提示。
 
 ## 不用了怎么卸载
 
