@@ -36,32 +36,6 @@ export default defineConfig({
         },
         { text: '其他工具', items: [{ text: '返回 SIFT 文档首页', link: '/' }] }
       ],
-      '/screen-recognition/': [
-        {
-          text: '旧版归档 · 屏幕识别',
-          items: [
-            { text: '工作区总览', link: '/screen-recognition/' },
-            { text: '电脑端五分钟快速开始', link: '/getting-started/' },
-            { text: '首次使用（专页）', link: '/screen-recognition/quick-start' },
-            { text: '查蛋识别', link: '/screen-recognition/egg-lookup' },
-            { text: '童话事件与血脉', link: '/screen-recognition/fairy-events' },
-            { text: '采集校准', link: '/screen-recognition/calibration' }
-          ]
-        },
-        {
-          text: '数据与支持',
-          items: [
-            { text: '数据库、历史与隐私', link: '/screen-recognition/data-and-privacy' },
-            { text: '故障排查', link: '/screen-recognition/troubleshooting' }
-          ]
-        },
-        {
-          text: '当前版本',
-          items: [
-            { text: '返回地图追踪文档', link: '/getting-started/' }
-          ]
-        }
-      ],
       '/android/': [
         {
           text: '手机端（精简版）',
