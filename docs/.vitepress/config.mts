@@ -38,7 +38,7 @@ export default defineConfig({
       ],
       '/screen-recognition/': [
         {
-          text: '电脑端 · 屏幕识别',
+          text: '旧版归档 · 屏幕识别',
           items: [
             { text: '工作区总览', link: '/screen-recognition/' },
             { text: '电脑端五分钟快速开始', link: '/getting-started/' },
@@ -56,7 +56,7 @@ export default defineConfig({
           ]
         },
         {
-          text: '切换工作区',
+          text: '当前版本',
           items: [
             { text: '返回地图追踪文档', link: '/getting-started/' }
           ]
@@ -99,16 +99,6 @@ export default defineConfig({
             { text: '路线导航', link: '/navigation/' },
             { text: 'HUD 与灵动岛', link: '/navigation/hud' },
             { text: '导航总览', link: '/navigation/overview' }
-          ]
-        },
-        {
-          text: '屏幕识别',
-          items: [
-            { text: '工作区总览', link: '/screen-recognition/' },
-            { text: '查蛋识别', link: '/screen-recognition/egg-lookup' },
-            { text: '童话事件与血脉', link: '/screen-recognition/fairy-events' },
-            { text: '采集校准', link: '/screen-recognition/calibration' },
-            { text: '故障排查', link: '/screen-recognition/troubleshooting' }
           ]
         },
         {
