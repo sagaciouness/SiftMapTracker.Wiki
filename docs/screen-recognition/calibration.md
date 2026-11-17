@@ -1,5 +1,10 @@
 # 采集校准
 
+::: info 旧版使用说明
+此页供带有屏幕识别工作台的旧版客户端使用。Windows v0.10.6 的操作请见[地图追踪快速开始](/getting-started/)。
+:::
+
+
 查蛋和童话事件共用校准中心，但分别保存自己的物理屏幕区域。
 
 ![采集校准中心](/screenshots/v0.9.3/screen-recognition-calibration.png)

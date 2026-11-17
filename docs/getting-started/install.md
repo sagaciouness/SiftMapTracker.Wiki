@@ -4,7 +4,7 @@
 
 - Windows 10 或 Windows 11，64 位系统。
 - 能正常运行《洛克王国：世界》的显卡和显示环境。
-- 普通运行建议至少保留 2 GB 可用内存和足够的解压空间；首次生成小尺寸动态 SIFT 缓存时需要至少 4 GB 可用物理内存。
+- 首次生成动态缓存需要预留可用内存和磁盘空间，具体数值见框选后的提示。
 - 游戏小地图必须完整可见，不能被其他窗口或录屏浮层遮挡。
 
 ## 官方获取渠道
@@ -26,22 +26,17 @@ GitHub 仓库用于代码与文档版本管理，不作为玩家安装包的官�
 解压后至少应能看到：
 
 ```text
-SIFT-Map-Tracker-v0.9.6/
+SIFT-Map-Tracker-v0.10.6/
 ├─ SiftMapTracker.Client.exe
-├─ sift-map-tracker/
-│  ├─ service/
-│  │  └─ service.exe
-│  ├─ assets/
-│  ├─ routes/
-│  ├─ resources/
-│  └─ runtime/
-└─ screen-recognition/
-   └─ service/
-      ├─ service.exe
-      └─ screen-recognition.manifest.json
+└─ sift-map-tracker/
+   ├─ service/service.exe
+   ├─ assets/
+   ├─ routes/
+   ├─ resources/
+   └─ runtime/
 ```
 
-地图定位和 OCR 服务均为单文件程序，不应出现 `_internal` 运行库目录。如果任一 `service.exe` 缺失、大小明显异常或被安全软件隔离，请重新获取完整玩家包，不要从其他版本单独复制服务文件。
+如果双击客户端后提示找不到定位服务，请确认已完整解压，并检查安全软件的隔离记录。
 
 ## 安全软件提示
 

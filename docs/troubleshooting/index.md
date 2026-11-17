@@ -18,25 +18,11 @@
 
 ## service.exe 缺失或无法启动
 
-当前玩家包中的地图定位和 OCR 服务均为单文件程序：
+在 Windows v0.10.6 的解压目录内检查 `sift-map-tracker/service/service.exe`。如果缺失，检查安全软件隔离记录，并从[官方渠道](/getting-started/install)重新获取完整包。
 
-```text
-sift-map-tracker/service/service.exe
-screen-recognition/service/service.exe
-```
+## SIFT 缓存无法生成
 
-包内不再包含 `service/_internal` 或单独的 `cv2.pyd`。任一服务缺失、大小明显异常或被隔离时，请重新下载完整包并解压，同时检查安全软件隔离记录。不要从来路不明的位置单独下载 DLL、PYD 或不同版本的 `service.exe`。
-
-## 小尺寸 SIFT 缓存无法生成
-
-SIFT 的 `135–163px` 选区需要对应的动态 136、144、152 或 160 缓存。确认：
-
-1. 当前至少有 4 GB 可用物理内存；
-2. 系统盘至少有 256 MB 可用空间；
-3. `%LOCALAPPDATA%\SiftMapTracker\sift-cache\` 可写；
-4. 等待进度窗口完成，不要强制结束准备进程。
-
-资源不足时选择“自行调整分辨率”，放大游戏窗口或小地图后重新框选到至少 `164px`，即可改用包内紧凑缓存。旧的小尺寸缓存、损坏缓存或缩放清单不匹配时，客户端会按缺失缓存重新确认生成；生成过程不会留下 `raw_1.png`、`raw_2.png` 等缩放底图。
+按弹窗提示检查可用内存和系统盘剩余空间，并确认当前 Windows 账户可以写入 `%LOCALAPPDATA%\SiftMapTracker\sift-cache`。如暂时无法生成，可取消并在释放空间后重新启动追踪。已经确认的框选区域会保留。也可以调整游戏显示尺寸后重新框选，短边在 164–256 像素时会使用包内缓存。
 
 ## 服务被应用控制策略阻止
 
@@ -60,11 +46,10 @@ SIFT 的 `135–163px` 选区需要对应的动态 136、144、152 或 160 缓�
 
 ## 需要收集什么
 
-不要只发送“不能用”。请准备：
+Windows v0.10.4 起会自动保存运行日志。问题出现后，可在文件资源管理器的地址栏输入 `%LOCALAPPDATA%\SiftMapTracker\logs`，找到 `runtime.log`。反馈时请注明出错时间，并附上：
 
 - 客户端版本；
 - Windows 版本、显示器分辨率和缩放比例；
 - 当前算法从启动服务到报错的完整日志；
 - `settings_override.json` 中与截图区域相关的字段；
 - 问题能否稳定复现。
-
